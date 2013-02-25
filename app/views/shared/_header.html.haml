@@ -1,0 +1,29 @@
+.navbar.navbar-fixed-top.navbar-inverse
+  .navbar-inner
+    .container
+      %a.btn.btn-navbar{"data-target" => ".nav-collapse", "data-toggle" => "collapse"}
+        %span.icon-bar hola
+        %span.icon-bar hola1
+        %span.icon-bar hola2
+      %a.brand{:href => "/"} Connectst app
+      .nav-collapse
+        / %ul.nav
+        /   %li= link_to "Browse Products"
+        /   %li= link_to "Price List"
+        /   %li= link_to "Contact Us"
+        /   %li= link_to "Cart"
+        %ul.nav.pull-right
+          - if user_signed_in?
+            .btn-group
+              %a.btn.btn-inverse.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+                = current_user.username
+                %span.caret
+              %ul.dropdown-menu
+                %li
+                  %a{:href => "#"} Account
+                %li.divider
+                %li= link_to "Sign out", destroy_user_session_path, method: :delete
+          - else
+            .nav-collapse
+              %ul.nav
+                %li= link_to "Sign in", user_session_path

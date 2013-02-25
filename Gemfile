@@ -8,6 +8,7 @@ gem 'jquery-rails'
 gem 'debugger'
 gem 'devise'
 gem 'pg'
+gem 'haml'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
