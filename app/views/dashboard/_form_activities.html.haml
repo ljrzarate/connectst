@@ -1,1 +1,26 @@
-%h1 hola
+.span2
+  .well.sidebar-nav
+    = gravatar_image_tag(current_user.email.gsub('spam', 'mdeering'), alt:current_user.username, class: "img-circle avatar-home")
+    %ul.nav.nav-list
+      %li.nav-header Activities List
+      %li.active
+        %a{:href => "#"} Home
+      %li
+        %a{:href => "#"} Library
+.span8
+  .hero-unit
+    %h1 Add a new Activity
+    %form.form-horizontal
+      .control-group
+        = fields_for :activities do |f|
+          .control-group
+            =f.label :name, class: "control-label"
+            .controls
+              =f.text_field :name, class: "text", placeholder: "Name"
+          .control-group
+            =f.label :description, class: "control-label"
+            .controls
+              =f.text_area :description, class: "text", placeholder: "Description",rows: "3"
+          .control-group
+            .controls
+              %button.btn.btn-primary{:type => "submit"} Create

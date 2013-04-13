@@ -1,13 +1,10 @@
 .tabbable.tabs-left
   %ul.nav.nav-tabs
     %li.active
-      %a{"data-toggle" => "tab", :href => "#home"} Home
+      %a{"data-toggle" => "tab", :href => "#home"} Activities
     %li
       %a{"data-toggle" => "tab", :href => "#profile"} Profile
     %li
-      %a{"data-toggle" => "tab", :href => "#messages"} Messages
-    %li
-      %a{"data-toggle" => "tab", :href => "#settings"} Settings
   .tab-content
     #home.tab-pane.fade.in.active
       = render "form_activities"

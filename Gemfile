@@ -9,6 +9,7 @@ gem 'debugger'
 gem 'devise'
 gem 'pg'
 gem 'haml'
+gem 'gravatar_image_tag'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
