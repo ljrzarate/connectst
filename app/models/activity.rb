@@ -5,6 +5,8 @@ class Activity < ActiveRecord::Base
   attr_accessible :name,
                   :description,
                   :thematic,
+                  :description,
+                  :content,
                   :user_id
 
 

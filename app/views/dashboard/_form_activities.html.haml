@@ -20,7 +20,15 @@
           .control-group
             =f.label :description, class: "control-label"
             .controls
-              =f.text_area :description, class: "text", placeholder: "Description",rows: "3"
+              =f.text_area :description, class: "text", placeholder: "Name", rows: "3"
+          .control-group
+            =f.label :thematic, class: "control-label"
+            .controls
+              =f.text_field :thematic, class: "text", placeholder: "Name"
+          .control-group
+            =f.label :content, class: "control-label"
+            .controls
+              =f.text_area :content, class: "text", placeholder: "Description",rows: "5"
           .control-group
             .controls
               %button.btn.btn-primary{:type => "submit"} Create
