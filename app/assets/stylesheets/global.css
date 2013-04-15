@@ -1,5 +1,16 @@
 .avatar-home{
   position: relative;
-  left: 23px;
+  left: 41px;
   top: -6px;
+}
+
+.well.add-act-box{
+  position: fixed;
+  width: 155px;
+  height: 137px;
+}
+
+fieldset.seach-home-box{
+  padding-top: 5px;
+  margin-left: -11px;
 }

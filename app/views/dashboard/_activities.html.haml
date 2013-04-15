@@ -1,0 +1,22 @@
+= render "shared/sidebar_add_activity"
+.span8
+  .hero-unit.rigth
+    %table.table.table-striped
+      %thead
+        %tr
+          %th
+            Name
+          %th
+            Description
+
+      %tbody
+      - current_user.activities.each do |act|
+        %tr
+          %td= link_to act.name, activity_path(act)
+          %td= act.description
+          %td= link_to '<i class="icon-edit"></i>'.html_safe, edit_activity_path(act)
+
+          %td= link_to '<i class="icon-trash"></i>'.html_safe, activity_path(act), method: :delete
+
+
+
