@@ -2,7 +2,7 @@
   .well.add-act-box
     = gravatar_image_tag(current_user.email.gsub('spam', 'mdeering'), alt:current_user.username, class: "img-circle avatar-home")
     %ul.nav
-      %li=link_to "add activity", new_activities_path, class: "btn btn-small"
+      %li=link_to "add activity", new_activity_path, class: "btn btn-small"
       %li
         %fieldset.seach-home-box
           %input.input-medium.search-query{:type => "text", placeholder: "search your activities"}
